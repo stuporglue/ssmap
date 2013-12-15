@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Stupid Simple Maps</title>
+        <style type='text/css'>
+            table { border-collapse:collapse; }
+            table,th,td { border: 1px solid black; }
+        </style>
+    </head>
+    <body>
+        <h1>This is a stupid simple map (SSMap) demo!</h1>
+        <p>
+        Leaflet maps are already pretty easy to use, but what if you want it EVEN EASIER?
+        </p>
+        <p>
+        The stupid simple map puts a leaflet map on your web page, automatically loading
+        Leaflet if needed. 
+        </p>
+        <p>
+        It defaults to a 500px square map of the world, centered at (0,0). You can change:
+        </p>
+        <ul><li>The zoom</li>
+            <li>The center</li>
+            <li>Map dimensions</li>
+            <li>Which basemap to use (street or satelite view)</li>
+            <li>If a marker is placed at the centerpoint of the map</li>
+        </ul>
+
+        <p>Simply put this line in your HTML where you want a map to appear:</p>
+        <pre>&lt;script src='ssmap-min.js'&gt;&lt;/script&gt;</pre>
+        <script src='ssmap-min.js'></script>
+
+        <p>You can also specify several options</p>
+        <pre>&amp;lt;script src='ssmap-min.js?lat=-90&amp;lon=45&amp;z=8&amp;mark=true&amp;tiles=map&amp;w=50%'&amp;gt;&amp;lt;/script&amp;gt;</pre>
+        <script src='ssmap-min.js?lat=-90&amp;lon=45&amp;z=8&amp;mark=false&amp;tiles=map&amp;w=50%'></script>
+
+        <p>
+        You can set up a div for the map if you want and set extra styles or whatever.
+        </p>
+        <pre>&lt;script src='ssmap-min.js?div=floatydiv&amp;lat=-90&amp;lon=45'&gt;&lt;/script&gt;</pre>
+        <div id='floatydiv' style='border:ridge 18px blue; width:350px; height: 350px;'></div>
+        <script src='ssmap-min.js?div=floatydiv&amp;lat=-90&amp;lon=45'></script>
+
+        <h2>Options</h2>
+        <p>All options are optional.</p>
+        <table><tr><th>Option</th><th>Default</th><th>Values</th><th>Notes</th></tr>
+            <tr><td>lat</td><td>0</td><td>Latitude (decimal degrees)</td><td>-90 to 90</td></tr>
+            <tr><td>lon</td><td>0</td><td>Longitude (decimal degrees)</td><td>-180 to 180</td></tr>
+            <tr><td>div</td><td><i>random ID</i></td><td>string</td><td>Map div ID. The div also get class <i>ssmap</i></td></tr>
+            <tr><td>h</td><td>500px</td><td>Valid CSS height</td><td>Height of the map div (including units)</td></tr>
+            <tr><td>w</td><td>500px</td><td>Valid CSS Width</td><td>Width of the map div (including units)</td></tr>
+            <tr><td>z</td><td>1</td><td>1-18</td><td>Initial zoom level</td></tr>
+            <tr><td>tiles</td><td>sat</td><td>map (street map) or sat (satelite)</td><td>Which tiles to use</td></tr>
+            <tr><td>mark</td><td>t</td><td>t (true) or f (false)</td><td>Place a marker at the map centerpoint if coordinates are not set to 0,0?</td></tr>
+        </table>
+
+        <h2>Advanced Usage</h2>
+        <p>
+            There is no advanced usage. Leaflet is really easy to use, so switch to that. Check out the <a href='http://leafletjs.com/examples.html'>examples</a> and <a href='http://leafletjs.com/reference.html'>API</a>.
+        </p>
+    </body>
+</html>
